@@ -2,7 +2,7 @@
 
 node {
   stage('scm'){
-    resolveScm source: github(checkoutCredentialsId: 'SAME', id: '_', repoOwner: 'drbosse', repository: 'better-pipe'), targets: ['*']
+    checkout scm
   }
   stage('branch'){
     echo env.BRANCH_NAME
