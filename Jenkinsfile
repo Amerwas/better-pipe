@@ -6,5 +6,6 @@ node {
   }
   stage('branch'){
     echo env.BRANCH_NAME
+    echo env.CHANGE_ID
   }
 }
