@@ -1,5 +1,5 @@
 #!/usr/bin/groovy
 
 node {
-  echo env.BRANCH
+  echo env.BRANCH_NAME
   }
