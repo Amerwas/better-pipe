@@ -1,5 +1,5 @@
 #!/usr/bin/groovy
 
 node {
-  echo env
+  echo env.BRANCH
   }
