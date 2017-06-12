@@ -1,5 +1,10 @@
 #!/usr/bin/groovy
 
 node {
-  echo env.BRANCH_NAME
+  stage('scm'){
+    resolveScm source: github(checkoutCredentialsId: 'SAME', id: '_', repoOwner: 'drbosse', repository: 'better-pipe'), targets: ['*']
   }
+  stage('branch'){
+    echo env.BRANCH_NAME
+  }
+}
